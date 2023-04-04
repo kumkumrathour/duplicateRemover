@@ -1,7 +1,9 @@
 import React from "react";
 import {useState} from "react";
+import { useLocation } from "react-router-dom";
  export function Page2() {
-  const str = "apple";
+  const location=useLocation()
+  const str = location.state.data;
   const [chars, setChars] = useState(str.split(""));
 //   function getfilter(index){
 //     let arr = [];

@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import App from './App';
 import { Page2 } from './page2';
 
-const Home = () => {
+function Home() {
   return (
        <div>
          <Routes>
