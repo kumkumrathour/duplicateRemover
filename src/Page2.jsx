@@ -27,9 +27,10 @@ import { useLocation } from "react-router-dom";
     setChars(newArr);
   }
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="">
+    <div className="flex flex-wrap justify-center  h-screen w-full bg-gradient-to-b from-blue-200 to-blue-500 ">
       {chars.map((char, index) => (
-        <div key={index} className="relative m-6 w-32 h-32 bg-orange-200 rounded-md shadow-md hover:shadow-lg" >
+        <div key={index} className="relative m-6 w-32 h-32 bg-orange-200  rounded-md shadow-md hover:shadow-lg" >
           <div className="absolute top-0 right-0 m-2">
             <div className="flex items-center justify-center w-7 h-7 rounded-full bg-green-600 hover:bg-red-500 text-white" onClick={()=>deleteHandler(char,index)}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
@@ -42,6 +43,7 @@ import { useLocation } from "react-router-dom";
           </div>
         </div>
       ))}
+    </div>
     </div>
   )
 }

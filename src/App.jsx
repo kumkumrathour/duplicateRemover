@@ -58,20 +58,31 @@ function App() {
     }
 
   return (
-    <div>
+    <div className='flex justify-center items-center h-screen w-full bg-gradient-to-b from-red-400 to-red-500'>
+    <div className='w-96 p-6 shadow-lg bg-white rounded-md'>
      <form onSubmit={handleSubmit}>
-      <input type="text" value={text} onChange={(e)=>{setText(e.target.value)}} className="bg-slate-200"></input>
-      {!enteredNameIsValid && <p className="">Name must not be empty or not contain any spaces.</p>}
-      <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 "> summit</button>
-     </form>
-     <h1>{text}</h1>
-     <div>
+      <h1 className='text-4xl black text-center font-semibold '>Login</h1>
+      <input type="text" value={text} onChange={(e)=>{setText(e.target.value)}} className="bg-slate-200 border text-base px-2 py-1 mt-5 focus:outline-none focus:ring-0 focus:border-gray-600 " placeholder='Enter Username...'></input>
+      <div>{!enteredNameIsValid && <p className="">Name must not be empty or not contain any spaces.</p>}</div>
+      
+      <div className='' >
         {oldSearch.length >0 ? (
           <ul>
             {oldSearch.map((search)=><li>{search}</li>)}
           </ul>
         ):(<p>No previous value</p>)}
-     </div>
+      </div>
+
+      <div className='mt-5'>
+      <button type="submit" className="bg-blue-500 hover:bg-blue-700
+       text-white  py-1 w-full rounded-md hover:bg-transparent hover:text-indigo-700 font-semibold ml-4 border-2"> submit</button>
+      </div>
+     </form>
+    </div>
+
+
+
+
     </div>
   )
 }
